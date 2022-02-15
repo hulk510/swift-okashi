@@ -12,6 +12,7 @@
 		1E8D38DF27BB6AAD00E1A08B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E8D38DE27BB6AAD00E1A08B /* Assets.xcassets */; };
 		1E8D38E227BB6AAD00E1A08B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E8D38E127BB6AAD00E1A08B /* Preview Assets.xcassets */; };
 		1E8D38EB27BB6BAC00E1A08B /* OkashiData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8D38EA27BB6BAC00E1A08B /* OkashiData.swift */; };
+		1E8D38EE27BB885500E1A08B /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8D38ED27BB885500E1A08B /* SafariView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		1E8D38E127BB6AAD00E1A08B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1E8D38EA27BB6BAC00E1A08B /* OkashiData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OkashiData.swift; sourceTree = "<group>"; };
 		1E8D38EC27BB7F0F00E1A08B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		1E8D38ED27BB885500E1A08B /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				1E8D38DC27BB6AA900E1A08B /* ContentView.swift */,
 				1E8D38EA27BB6BAC00E1A08B /* OkashiData.swift */,
 				1E8D38DE27BB6AAD00E1A08B /* Assets.xcassets */,
+				1E8D38ED27BB885500E1A08B /* SafariView.swift */,
 				1E8D38E027BB6AAD00E1A08B /* Preview Content */,
 			);
 			path = "swift-okashi";
@@ -142,6 +145,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E8D38EE27BB885500E1A08B /* SafariView.swift in Sources */,
 				1E8D38DD27BB6AA900E1A08B /* ContentView.swift in Sources */,
 				1E8D38EB27BB6BAC00E1A08B /* OkashiData.swift in Sources */,
 				1E8D38DB27BB6AA900E1A08B /* swift_okashiApp.swift in Sources */,

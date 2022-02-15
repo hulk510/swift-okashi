@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @StateObject var okashiDataList = OkashiData()
     @State var inputText = ""
+    @State var showSafari = false
     
     var body: some View {
         VStack {
@@ -31,19 +32,28 @@ struct ContentView: View {
             // bindingとpublisedの違いがいまいちわからん。
             List(okashiDataList.okashiList) {
                 okashi in // これの書き方謎すぎ
-                HStack {
-                    AsyncImage(url: okashi.image) {
-                        image in
-                        image
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(height:40)
-                    } placeholder: {
-                        // 読み込み中のインジゲーターを表示するインスタンスらしい
-                        ProgressView()
+                
+                Button(action: {
+                    showSafari.toggle()
+                }) {
+                    HStack {
+                        AsyncImage(url: okashi.image) {
+                            image in
+                            image
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(height:40)
+                        } placeholder: {
+                            // 読み込み中のインジゲーターを表示するインスタンスらしい
+                            ProgressView()
+                        }
+                        Text(okashi.name)
                     }
-                    Text(okashi.name)
-                }
+                }.sheet(isPresented: self.$showSafari, content: {
+                    SafariView(url: okashi.link)
+                    // これがあるおかげでしたに黒い部分が出来ずに画面いっぱいに表示してくれるみたい。
+                        .edgesIgnoringSafeArea(.bottom)
+                })
             }
         }
     }
