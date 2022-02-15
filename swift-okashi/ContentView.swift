@@ -49,6 +49,7 @@ struct ContentView: View {
                         }
                         Text(okashi.name)
                     }
+                    // sheetを表示するかどうかだけ決めといてあとはsafariviewでrepresentableからuiを引っ張ってきて表示すれば簡単にできるってのがいいな。
                 }.sheet(isPresented: self.$showSafari, content: {
                     SafariView(url: okashi.link)
                     // これがあるおかげでしたに黒い部分が出来ずに画面いっぱいに表示してくれるみたい。
